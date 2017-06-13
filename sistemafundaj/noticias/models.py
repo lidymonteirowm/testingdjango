@@ -8,12 +8,19 @@ class Noticias(models.Model):
         ('draft', 'Rascunho'),
         ('published', 'Publicado'),
     )
-    title = models.CharField(max_length=50, verbose_name='Título')
+
+    CATEGORY_CHOICES = (
+        ('news', 'Noticia'),
+    )
+
+    title = models.CharField(max_length=140, verbose_name='Título')
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     author = models.ForeignKey(User)
-    url = models.URLField(max_length=150, verbose_name='Link/URL')
-    summary = models.TextField(max_length=100, verbose_name='Resumo')
-    category = models.CharField(max_length=50, verbose_name='Categoria')
+    url = models.URLField(max_length=300, verbose_name='Link/URL')
+    summary = models.TextField(max_length=350, verbose_name='Resumo')
+    category = models.CharField(max_length=30,
+                              choices=CATEGORY_CHOICES,
+                              default='news', verbose_name='Categoria')
     publish = models.DateTimeField(default=timezone.now,
                                    verbose_name='Publicação')
     created = models.DateTimeField(auto_now_add=True,
