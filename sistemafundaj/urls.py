@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^$', home),
     url(r'^noticia/$', noticia),
     url(r'^sistema/$', sistema),
-    url(r'^sistema/api/', include('sistemafundaj.api.urls')),
+    url(r'^api/', include('sistemafundaj.api.urls')),
     url(r'^sistema/admin/', admin.site.urls),
 ]
