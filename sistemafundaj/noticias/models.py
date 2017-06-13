@@ -18,7 +18,7 @@ class Noticias(models.Model):
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     author = models.ForeignKey(User)
     url = models.URLField(max_length=300, verbose_name='Link/URL')
-    summary = models.TextField(max_length=350, verbose_name='Resumo')
+    summary = models.TextField(max_length=400, verbose_name='Resumo')
     category = models.CharField(max_length=30,
                               choices=CATEGORY_CHOICES,
                               default='news', verbose_name='Categoria')
