@@ -5333,16 +5333,16 @@ button:focus {
   background-color: #b579d2 !important; }
 
 .btn-primary {
-  background: #4285F4; }
+  background:  #063323;}
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #5a95f5 !important; }
+    background-color: #012015 !important; }
   .btn-primary.active {
     background-color: #0b51c5 !important; }
 
 .btn-default {
-  background: #2BBBAD; }
+  background: #17892d; }
   .btn-default:hover, .btn-default:focus, .btn-default:active {
-    background-color: #30cfc0 !important; }
+    background-color: #0f6720 !important; }
   .btn-default.active {
     background-color: #186860 !important; }
 
